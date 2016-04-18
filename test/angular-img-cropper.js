@@ -1168,7 +1168,7 @@ angular.module('angular-img-cropper', []).directive("imageCropper", ['$document'
                             didDraw = didDraw || this.drawCornerCursor(this.markers[i], cropTouch.x, cropTouch.y, e);
                         }
                         if (!didDraw) {
-                            imageCropperDataShare.setStyle(this.canvas, 'initial');
+                            imageCropperDataShare.setStyle(this.canvas, 'auto');
                         }
                     }
                     if (!didDraw && !cursorDrawn && this.center.touchInBounds(cropTouch.x, cropTouch.y)) {
@@ -1315,7 +1315,7 @@ angular.module('angular-img-cropper', []).directive("imageCropper", ['$document'
 
               crop = new ImageCropper(canvas, canvas.width / 2 - width / 2, canvas.height / 2 - height / 2, width, height, keepAspect, touchRadius);
 
-              $(canvas).data('crop.angular-img-cropper', crop);
+              angular.element(canvas).data('crop.angular-img-cropper', crop);
 
               if(oldImage) {
                 crop.setImage(oldImage);
