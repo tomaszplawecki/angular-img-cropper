@@ -52,6 +52,7 @@ angular.module('myApp', ['angular-img-cropper']);
 | min-height (*optional*) | The minimum height that the crop area can be set to.
 | cors (*optional*) |  Allows images loaded from foreign origins to be used in canvas as if they were being loaded from the current origin ([MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image)). *Default: no*
 | color (*optional*) |  Color of cropper boundaries ([accepted color values](http://www.w3schools.com/cssref/css_colors_legal.asp)). *Default: 'rgba(255,228,0,1)'*
+| enforce-file-type (*optional*) |  Forces the image to be converted to the specified file type rather then the file type of original specified image.
 
 ## Example usage
 
