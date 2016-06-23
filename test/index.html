@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css">
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../src/angular-img-cropper.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-app="app">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>angular-img-cropper</h1>
+      <p>Chop chop chop ...</p>
+    </div>
+  </div>
+
+  <div ng-controller="ImageCropperCtrl as vm" class="container">
+
+    <input type="file" img-cropper-fileread image="vm.image.src">
+
+    <!--width="500" 
+      height="300" 
+      min-width="100" 
+      min-height="50"-->
+
+
+    <canvas
+      width="1024"
+      height="768"
+      image-cropper
+      image="vm.image.src"
+      cropped-image="vm.image.dst"
+      crop-width="vm.cropper.width"
+      crop-height="vm.cropper.height"
+      crop-area-bounds="vm.cropper.bounds"
+      keep-aspect="vm.cropper.keepaspect",
+      color="rgba(100, 100, 100, 0.8)">
+    </canvas>
+
+    <div ng-if="vm.image.dst"><img ng-src="{{vm.image.dst}}" /></div>
+    
+    <!--<input type="file" img-cropper-fileread image="vm.cropper.sourceImage" />
+    <div>
+      <canvas width="500" height="300" id="canvas" image-cropper image="vm.cropper.sourceImage" cropped-image="vm.cropper.croppedImage"
+        crop-width="vm.width" crop-height="vm.height" min-width="100" min-height="50" keep-aspect="vm.keepaspect" crop-area-bounds="vm.bounds">
+      </canvas>
+    </div>
+    <input type="text" ng-model="vm.width">
+    <input type="text" ng-model="vm.height">
+    <input type="checkbox" ng-model="vm.keepaspect">
+    <div>Cropped Image (Left: {{vm.bounds.left}} Right: {{vm.bounds.right}} Top: {{vm.bounds.top}} Bottom: {{vm.bounds.bottom}})</div>
+    <div ng-show="vm.cropper.croppedImage!=null"><img ng-src="{{vm.cropper.croppedImage}}" /></div>-->
+
+    <!--<pre><code>{{ vm.image | json }}</code></pre>-->
+  </div>
+</body>
+
+</html>
