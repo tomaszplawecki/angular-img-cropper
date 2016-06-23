@@ -93,7 +93,7 @@
         scope.$watch('keepAspect', setup);
         scope.$watch('touchRadius', setup);
 
-        scope.$watch('image', load);
+        scope.$watch('imgSrc', load);
       }
     };
   });

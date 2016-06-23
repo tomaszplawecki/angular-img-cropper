@@ -23,9 +23,9 @@ app.controller("ImageCropperCtrl", function ($scope) {
     }
   };
 
-  // $scope.$watch('vm.image.src', function(x) {
-  //   console.log('src', x);
-  // });
+  $scope.$watch('vm.image.src', function(x) {
+    console.log('src', x);
+  });
 
   // $scope.$watch('vm.image.dst', function(x) {
   //   console.log('dst', x);
