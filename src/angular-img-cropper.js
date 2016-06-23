@@ -25,7 +25,7 @@
   mod.directive("imgCropper", function ($document, $window, ImageCropper) {
     return {
       scope: {
-        image: "=",
+        imgSrc: "=",
         croppedImage: "=",
         cropWidth: "=",
         cropHeight: "=",
@@ -64,9 +64,9 @@
           $(canvas).data('crop.angular-img-cropper', crop);
 
           if (oldImage) {
-            crop.setImage(oldImage, scope.image.fileType);
+            crop.setImage(oldImage, scope.imgSrc.fileType);
           } else {
-            load(scope.image);
+            load(scope.imgSrc);
           }
         }
 
