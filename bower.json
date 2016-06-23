@@ -27,5 +27,8 @@
     ".git",
     ".idea",
     ".txt"
-  ]
+  ],
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
 }
