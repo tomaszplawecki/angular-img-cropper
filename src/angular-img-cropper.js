@@ -22,7 +22,7 @@
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
-  mod.directive("imageCropper", function ($document, $window, ImageCropper) {
+  mod.directive("imgCropper", function ($document, $window, ImageCropper) {
     return {
       scope: {
         image: "=",
