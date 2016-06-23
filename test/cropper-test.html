@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../src/angular-img-cropper.js"></script>
-
-<script src="app.js"></script>
-
-<script src="cropper-controller.js"></script>
+  <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css">
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../src/angular-img-cropper.js"></script>
+  <script src="app.js"></script>
 </head>
+
 <body ng-app="app">
-  <div ng-controller="ImageCropperCtrl as ctrl">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>angular-img-cropper</h1>
+      <p>Chop chop chop ...</p>
+    </div>
+  </div>
+
+  <div ng-controller="ImageCropperCtrl as ctrl" class="container">
     <input type="file" img-cropper-fileread image="cropper.sourceImage" />
     <div>
-      <canvas width="500" 
-			  height="300"
-			  id="canvas" 
-			  image-cropper 
-			  image="cropper.sourceImage"
-			  cropped-image="cropper.croppedImage"
-			  crop-width="width"
-			  crop-height="height" 
-			  min-width="100" 
-			  min-height="50" 
-			  keep-aspect="keepaspect" 
-			  crop-area-bounds="bounds">
-	    </canvas>
+      <canvas width="500" height="300" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage"
+        crop-width="width" crop-height="height" min-width="100" min-height="50" keep-aspect="keepaspect" crop-area-bounds="bounds">
+      </canvas>
     </div>
     <input type="text" ng-model="width">
     <input type="text" ng-model="height">
@@ -34,4 +31,5 @@
     <div ng-show="cropper.croppedImage!=null"><img ng-src="{{cropper.croppedImage}}" /></div>
   </div>
 </body>
+
 </html>
