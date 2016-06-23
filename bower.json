@@ -6,25 +6,26 @@
     "Allan Bishop<allan.bishop@gmail.com>"
   ],
   "description": "Client side image cropper directive for AngularJS (rectangular area, aspect ratio, multi-touch)",
-  "main": "dist/angular-img-cropper.min.js",
+  "main": "dist/angular-img-cropper.js",
   "keywords": [
     "angular",
     "cropper",
     "image",
-	"img",
+    "img",
     "rectangle",
-	"aspect",
+    "aspect",
     "crop"
   ],
   "license": "MIT",
   "ignore": [
     "node_modules",
+    "bower_components",
     "src",
     "test",
-	"package.json",
-	"gruntfile.js",
-	".git",
-	".idea",
-	".txt"
+    "package.json",
+    "gruntfile.js",
+    ".git",
+    ".idea",
+    ".txt"
   ]
 }
