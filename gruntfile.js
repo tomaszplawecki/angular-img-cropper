@@ -18,13 +18,13 @@ module.exports = function (grunt) {
         src: [ 'angular-img-cropper.js' ],
         dest: 'dist',
         expand: true
-      },
-      test: {
-        cwd: 'src',
-        src: [ '*.js' ],
-        dest: 'test',
-        expand: true
-      },
+      }
+      // test: {
+      //   cwd: 'src',
+      //   src: [ '*.js' ],
+      //   dest: 'test',
+      //   expand: true
+      // },
     },
 
   });
