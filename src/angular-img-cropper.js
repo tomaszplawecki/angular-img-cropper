@@ -26,7 +26,7 @@
     return {
       scope: {
         imgSrc: "=",
-        croppedImage: "=",
+        imgDst: "=",
         cropWidth: "=",
         cropHeight: "=",
         keepAspect: "=",

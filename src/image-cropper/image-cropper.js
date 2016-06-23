@@ -654,8 +654,8 @@
       this.vertSquashRatio = this.detectVerticalSquash(this.srcImage);
       this.draw(this.ctx);
       var croppedImg = this.getCroppedImage(this.scope.cropWidth, this.scope.cropHeight);
-      if (this.attrs.croppedImage !== undefined) {
-        this.scope.croppedImage = croppedImg.src;
+      if (this.attrs.imgDst !== undefined) {
+        this.scope.imgDst = croppedImg.src;
       }
 
       if (this.scope.cropAreaBounds && this.imageSet) {
@@ -914,8 +914,8 @@
 
         if (this.isImageSet() && this.currentlyInteracting) {
           var img = this.getCroppedImage(this.scope.cropWidth, this.scope.cropHeight);
-          if (this.attrs.croppedImage !== undefined) {
-            this.scope.croppedImage = img.src;
+          if (this.attrs.imgDst !== undefined) {
+            this.scope.imgDst = img.src;
           }
           this.scope.$apply();
         }
@@ -971,8 +971,8 @@
 
         if (this.currentlyInteracting == true) {
           var img = this.getCroppedImage(this.scope.cropWidth, this.scope.cropHeight);
-          if (this.attrs.croppedImage !== undefined) {
-            this.scope.croppedImage = img.src;
+          if (this.attrs.imgDst !== undefined) {
+            this.scope.imgDst = img.src;
           }
           this.scope.$apply();
         }
