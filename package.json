@@ -1,11 +1,30 @@
 {
   "name": "angular-img-cropper",
   "version": "1.0.0",
+  "description": "An image cropping tool for AngularJS. Features a rectangular crop area. The crop area's aspect ratio can be enforced during dragging. The crop image can either be 1:1 or scaled to fit an area.",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/McNull/angular-img-cropper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/McNull/angular-img-cropper/issues"
+  },
+  "homepage": "https://github.com/McNull/angular-img-cropper#readme",
   "devDependencies": {
-    "grunt": "0.4.1",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-uglify": "0.2.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "install": "^0.1.8"
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4"
   }
 }
