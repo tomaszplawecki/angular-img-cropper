@@ -1,0 +1,26 @@
+body {
+  padding-bottom: 250px;
+}
+
+.img-cropper,
+.img-cropper-container {
+  margin-bottom: 10px;
+}
+
+.img-cropper-container {
+  padding: 10px;
+  background-color: #000;
+}
+
+.img-cropper-canvas {
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.col-center {
+  float: none;
+  margin: 0 auto;
+}

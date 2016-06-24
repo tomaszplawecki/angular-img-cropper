@@ -34,6 +34,7 @@
 </script>
   <script src="app.js">
 </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body ng-app="app">
@@ -45,10 +46,8 @@
     </div>
   </div>
 
-  <div ng-controller="ImageCropperCtrl as vm" class="container">
 
-    
-
+  <div ng-controller="ImageCropCtrl as vm" class="container">
     <div class="img-cropper">
       <div class="img-cropper-container">
         <div class="img-cropper-contraint">
@@ -63,51 +62,25 @@
             <i class="fa fa-upload"></i>&nbsp;Select File
             <input type="file" img-cropper-fileread image="vm.image.src" style="display:none;">
           </label>
-          <button class="btn btn-lg btn-primary"><i class="fa fa-crop"></i>&nbsp;Crop Image</button>
+          <button class="btn btn-lg btn-primary" ng-click="vm.crop()"><i class="fa fa-crop"></i>&nbsp;Crop Image</button>
         </div>
       </div>
     </div>
 
-    <div ng-if="vm.image.dst"><img ng-src="{{vm.image.dst}}" /></div>
-
-    <style>
-      .img-cropper,
-      .img-cropper-container {
-        margin-bottom: 10px;
-      }
-      
-      .img-cropper-container {
-        padding: 10px;
-        background-color: #000;
-      }
-      
-      .img-cropper-canvas {
-        display: block;
-        padding: 0;
-        margin: 0 auto;
-        width: 100%;
-        height: auto;
-      }
-      
-      .col-center {
-        float: none;
-        margin: 0 auto;
-      }
-    </style>
-
-    <!--<input type="file" img-cropper-fileread image="vm.cropper.sourceImage" />
-    <div>
-      <canvas width="500" height="300" id="canvas" image-cropper image="vm.cropper.sourceImage" cropped-image="vm.cropper.croppedImage"
-        crop-width="vm.width" crop-height="vm.height" min-width="100" min-height="50" keep-aspect="vm.keepaspect" crop-area-bounds="vm.bounds">
-      </canvas>
+    <div class="img-cropper-image-list">
+      <div class="row">
+        <div class="col-xs-3 col-md-2" ng-repeat="image in vm.images track by $index">
+          <a href="#" class="thumbnail">
+            <img ng-src="{{image}}" />
+          </a>
+        </div>
+      </div>
     </div>
-    <input type="text" ng-model="vm.width">
-    <input type="text" ng-model="vm.height">
-    <input type="checkbox" ng-model="vm.keepaspect">
-    <div>Cropped Image (Left: {{vm.bounds.left}} Right: {{vm.bounds.right}} Top: {{vm.bounds.top}} Bottom: {{vm.bounds.bottom}})</div>
-    <div ng-show="vm.cropper.croppedImage!=null"><img ng-src="{{vm.cropper.croppedImage}}" /></div>-->
+  </div>
 
-    <!--<pre><code>{{ vm.image | json }}</code></pre>-->
+  </div>
+
+
   </div>
 </body>
 
