@@ -2,6 +2,17 @@
 
 An image cropping tool for AngularJS. Features a rectangular crop area. The crop area's aspect ratio can be enforced during dragging. The crop image can either be 1:1 or scaled to fit an area.
 
+This fork contains various fixes and features done by Matthew Bacalakis and some changes done to fit my personal needs, including:
+
+* Responsive canvas scaling.
+* Crop on demand (rather than on each change).
+* Some naming convention changes.
+* Directory `dist` now contains both minified and unminified versions.
+* Changes for easier development:
+    * Project split in several javascript files instead of one large file.
+    * Beter dependency handling.
+    * Migrated to gulp (instead of grunt).
+
 ## Screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/AllanBishop/ImageCropper/master/screenshots/screenshot.jpg "Screenshot")
