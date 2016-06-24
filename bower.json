@@ -32,6 +32,7 @@
     "angular": "^1.5.7"
   },
   "devDependencies": {
-    "bootstrap-css": "^3.3.6"
+    "bootstrap-css": "^3.3.6",
+    "font-awesome": "^4.6.3"
   }
 }

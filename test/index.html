@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css">
   <script src="../bower_components/angular/angular.js">
 </script>
   <script src="../src/angular-img-cropper.js">
@@ -48,39 +49,48 @@
 
     <input type="file" img-cropper-fileread image="vm.image.src">
 
-    <!--width="500" 
-      height="300" 
-      min-width="100" 
-      min-height="50"-->
-
-
-    <div>
-      <canvas
-        width="1024"
-        height="768"
-        img-cropper
-        img-src="vm.image.src"
-        img-dst="vm.image.dst"
-        crop-width="vm.cropper.width"
-        crop-height="vm.cropper.height"
-        crop-area-bounds="vm.cropper.bounds"
-        keep-aspect="vm.cropper.keepaspect"
-        color="rgba(100, 100, 100, 0.8)">
-      </canvas>
+    <div class="img-cropper">
+      <div class="img-cropper-container">
+        <div class="img-cropper-contraint">
+          <canvas class="img-cropper-canvas" width="1920" height="1080" img-cropper img-src="vm.image.src" img-dst="vm.image.dst" crop-width="vm.cropper.width"
+            crop-height="vm.cropper.height" crop-area-bounds="vm.cropper.bounds" keep-aspect="vm.cropper.keepaspect" color="rgba(100, 100, 100, 0.8)">
+          </canvas>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-center text-center">
+            <button class="btn btn-lg btn-default"><i class="fa fa-upload"></i>&nbsp;Select File</button>
+            <button class="btn btn-lg btn-primary"><i class="fa fa-crop"></i>&nbsp;Crop Image</button>
+        </div>
+      </div>
     </div>
 
     <div ng-if="vm.image.dst"><img ng-src="{{vm.image.dst}}" /></div>
-    
+
     <style>
-      canvas {
+      .img-cropper,
+      .img-cropper-container {
+        margin-bottom: 10px;
+      }
+      
+      .img-cropper-container {
+        padding: 10px;
+        background-color: #000;
+      }
+      
+      .img-cropper-canvas {
         display: block;
         padding: 0;
         margin: 0 auto;
-        background-color: red;
-
         width: 100%;
         height: auto;
       }
+      
+      .col-center {
+        float: none;
+        margin: 0 auto;
+      }
+      
     </style>
 
     <!--<input type="file" img-cropper-fileread image="vm.cropper.sourceImage" />
