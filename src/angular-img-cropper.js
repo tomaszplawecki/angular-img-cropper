@@ -20,6 +20,38 @@
     return __extends;
   });
 
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
+  mod.directive("canvasResponsive", function($window) {
+    return {
+      restrict: 'A',
+      link: function($scope, $element, $attrs) {
+        
+        var canvas = $element.find('canvas')[0];
+        var element = $element[0];
+        var ratio = canvas.offsetHeight / canvas.offsetWidth;
+
+        function scale() {
+          canvas.width = element.offsetWidth;
+          canvas.height = canvas.width * ratio;
+          console.log(canvas.width);
+          console.log(canvas.height);
+        } 
+
+        scale();
+
+        $(window).bind('resize', function() {
+        
+          scale();
+
+
+        });
+
+      }
+    };
+  });
+
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
   mod.directive("imgCropper", function ($document, $window, ImageCropper) {
@@ -40,7 +72,10 @@
       },
       restrict: "A",
       link: function (scope, element, attrs) {
+        
         var crop, destroyed = false;
+        var canvas = element[0];
+
         scope.color = scope.color || 'rgba(90,90,90,0.75)';
 
         scope.$on('$destroy', function () {
@@ -52,7 +87,7 @@
             return;
           }
 
-          var canvas = element[0];
+          
           var width = scope.cropWidth;
           var height = scope.cropHeight;
           var keepAspect = scope.keepAspect;
@@ -93,7 +128,14 @@
         scope.$watch('keepAspect', setup);
         scope.$watch('touchRadius', setup);
 
+//         scope.$watch(function() {
+//           return canvas.width + canvas.height;
+//         }, function() {
+//           setup();
+//         });
+
         scope.$watch('imgSrc', load);
+
       }
     };
   });

@@ -3,21 +3,36 @@
 
 <head>
   <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css">
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="../src/angular-img-cropper.js"></script>
-  <script src="../src/image-cropper/handle.js"></script>
-  <script src="../src/image-cropper/point.js"></script>
-  <script src="../src/image-cropper/point-pool.js"></script>
-  <script src="../src/image-cropper/crop-service.js"></script>
-  <script src="../src/image-cropper/drag-marker.js"></script>
-  <script src="../src/image-cropper/corner-marker.js"></script>
-  <script src="../src/image-cropper/bounds.js"></script>
-  <script src="../src/image-cropper/crop-touch.js"></script>
-  <script src="../src/image-cropper/image-cropper.js"></script>
-  <script src="../src/image-cropper/image-cropper-data-share.js"></script>
-  <script src="../src/file-read/img-cropper-file-read.js"></script>
-  <script src="../src/file-read/img-cropper-file-read-call.js"></script>
-  <script src="app.js"></script>
+  <script src="../bower_components/angular/angular.js">
+</script>
+  <script src="../src/angular-img-cropper.js">
+</script>
+  <script src="../src/image-cropper/handle.js">
+</script>
+  <script src="../src/image-cropper/point.js">
+</script>
+  <script src="../src/image-cropper/point-pool.js">
+</script>
+  <script src="../src/image-cropper/crop-service.js">
+</script>
+  <script src="../src/image-cropper/drag-marker.js">
+</script>
+  <script src="../src/image-cropper/corner-marker.js">
+</script>
+  <script src="../src/image-cropper/bounds.js">
+</script>
+  <script src="../src/image-cropper/crop-touch.js">
+</script>
+  <script src="../src/image-cropper/image-cropper.js">
+</script>
+  <script src="../src/image-cropper/image-cropper-data-share.js">
+</script>
+  <script src="../src/file-read/img-cropper-file-read.js">
+</script>
+  <script src="../src/file-read/img-cropper-file-read-call.js">
+</script>
+  <script src="app.js">
+</script>
 </head>
 
 <body ng-app="app">
@@ -39,21 +54,35 @@
       min-height="50"-->
 
 
-    <canvas
-      width="1024"
-      height="768"
-      img-cropper
-      img-src="vm.image.src"
-      img-dst="vm.image.dst"
-      crop-width="vm.cropper.width"
-      crop-height="vm.cropper.height"
-      crop-area-bounds="vm.cropper.bounds"
-      keep-aspect="vm.cropper.keepaspect",
-      color="rgba(100, 100, 100, 0.8)">
-    </canvas>
+    <div>
+      <canvas
+        width="1024"
+        height="768"
+        img-cropper
+        img-src="vm.image.src"
+        img-dst="vm.image.dst"
+        crop-width="vm.cropper.width"
+        crop-height="vm.cropper.height"
+        crop-area-bounds="vm.cropper.bounds"
+        keep-aspect="vm.cropper.keepaspect"
+        color="rgba(100, 100, 100, 0.8)">
+      </canvas>
+    </div>
 
     <div ng-if="vm.image.dst"><img ng-src="{{vm.image.dst}}" /></div>
     
+    <style>
+      canvas {
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        background-color: red;
+
+        width: 100%;
+        height: auto;
+      }
+    </style>
+
     <!--<input type="file" img-cropper-fileread image="vm.cropper.sourceImage" />
     <div>
       <canvas width="500" height="300" id="canvas" image-cropper image="vm.cropper.sourceImage" cropped-image="vm.cropper.croppedImage"
