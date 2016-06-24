@@ -47,7 +47,7 @@
 
   <div ng-controller="ImageCropperCtrl as vm" class="container">
 
-    <input type="file" img-cropper-fileread image="vm.image.src">
+    
 
     <div class="img-cropper">
       <div class="img-cropper-container">
@@ -59,8 +59,11 @@
       </div>
       <div class="row">
         <div class="col-md-12 col-center text-center">
-            <button class="btn btn-lg btn-default"><i class="fa fa-upload"></i>&nbsp;Select File</button>
-            <button class="btn btn-lg btn-primary"><i class="fa fa-crop"></i>&nbsp;Crop Image</button>
+          <label class="btn btn-lg btn-default">
+            <i class="fa fa-upload"></i>&nbsp;Select File
+            <input type="file" img-cropper-fileread image="vm.image.src" style="display:none;">
+          </label>
+          <button class="btn btn-lg btn-primary"><i class="fa fa-crop"></i>&nbsp;Crop Image</button>
         </div>
       </div>
     </div>
@@ -90,7 +93,6 @@
         float: none;
         margin: 0 auto;
       }
-      
     </style>
 
     <!--<input type="file" img-cropper-fileread image="vm.cropper.sourceImage" />
