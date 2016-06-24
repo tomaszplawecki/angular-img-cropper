@@ -21,8 +21,14 @@
     Point.prototype.getNext = function () {
       return this.next;
     };
-    return Point;
 
+    Point.prototype.scale = function(x, y) {
+      this.x *= x;
+      this.y *= y;
+    };
+
+    return Point;
+    
   });
 
 })(angular, angular.element, angular.module('angular-img-cropper'));
