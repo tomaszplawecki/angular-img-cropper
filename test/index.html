@@ -31,7 +31,8 @@
   <script src="../src/file-read/img-cropper-file-read.js">
 </script>
   <script src="../src/file-read/img-cropper-file-read-call.js">
-</script>
+  </script>
+  <script src="bakkrunt.js"></script>
   <script src="app.js">
 </script>
   <link rel="stylesheet" href="style.css">
@@ -40,12 +41,11 @@
 <body ng-app="app">
 
   <div class="jumbotron">
-    <div class="container">
+    <div class="container text-center">
       <h1>angular-img-cropper</h1>
-      <p>Chop chop chop ...</p>
+      <p><a href="https://github.com/McNull/angular-img-cropper"><span class="fa fa-github"></span>&nbsp;https://github.com/McNull/angular-img-cropper</a></p>
     </div>
   </div>
-
 
   <div ng-controller="ImageCropCtrl as vm" class="container">
     <div class="img-cropper">
@@ -71,7 +71,7 @@
       <div class="row">
         <div class="col-xs-3 col-md-2" ng-repeat="image in vm.images track by $index">
           <a href="#" class="thumbnail">
-            <img ng-src="{{image}}" />
+            <img class="img-responsive" ng-src="{{image}}" />
           </a>
         </div>
       </div>

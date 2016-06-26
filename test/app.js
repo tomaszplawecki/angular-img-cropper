@@ -1,6 +1,6 @@
-var app = angular.module('app', ['angular-img-cropper']);
+var app = angular.module('app', ['angular-img-cropper', 'bakkrunt']);
 
-app.controller("ImageCropCtrl", function ($scope) {
+app.controller("ImageCropCtrl", function (ngBakkrunt) {
 
   var self = this;
 
@@ -8,7 +8,7 @@ app.controller("ImageCropCtrl", function ($scope) {
     // src: null, /* { fileType: "image/png"; imageData: "data:image/png;base64,..." } */
     src: {
       // fileType: 'image/png',
-      imageData: './angular-bakkrunt.png'
+      imageData: ngBakkrunt
     },
     dst: null /* "data:image/png;base64,..." */
   };
@@ -27,9 +27,9 @@ app.controller("ImageCropCtrl", function ($scope) {
 
   this.images = [];
 
-  this.crop = function() {
-    console.log(self.images);
-    self.images.push(self.image.dst);
+  this.crop = function () {
+    self.images.unshift(self.image.dst);
   };
 
 });
+
