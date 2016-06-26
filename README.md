@@ -19,7 +19,8 @@ This fork contains various fixes and features done by Matthew Bacalakis and some
 
 ## Live demo
 
-[Live demo on JSBin](http://jsbin.com/fukeqe/9/)
+[Responsive demo on plunker](http://plnkr.co/edit/bpyUOI?p=info)
+[Original live demo on JSBin](http://jsbin.com/fukeqe/9/)
 
 ## Requirements
 
