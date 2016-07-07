@@ -1259,7 +1259,7 @@
     }
     ;
     ImageCropper.prototype.onTouchMove = function(e) {
-      if (!destroyed && this.isImageSet()) {
+      if (this.isImageSet()) {
         e.preventDefault();
         /**
          * fixes behaviour if event is wrapped by jquery
